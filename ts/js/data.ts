@@ -4,6 +4,37 @@
 const numbers: number[] = [1, 15, 9, -9, -8, -7, 2, 8, 51, 6, 5];
 const numbers2: number[] = [10, 105, 90, -90, -18, -17, 20, 18, 51, 16, 35];
 
+interface numItem {
+  id: string;
+  name: string;
+}
+
+const numItemPvz: numItem = {
+  id: 'sdsd',
+  name: 'Mike',
+};
+
+const num15: numItem[] = [
+  {
+    id: 'id_1',
+    name: 'James ',
+  },
+  {
+    id: 'id_1',
+    name: 'James ',
+  },
+  {
+    id: 'id_3',
+    name: 'Mike',
+  },
+];
+
+// const rez: number[] = numbers.map((sk): number => {
+//   if (numbers[2] > 2) {
+//     return sk + 2;
+//   }
+// });
+
 // console.log('numbers ===', numbers[0]);
 
 // 1. parasyti funkcija kuri ima masyva kaip argumenta ir grazina vidurki (jei galit su reduce)
@@ -18,9 +49,23 @@ function getAvg(arr: number[]): number {
   console.log('avg ===', avg);
   return avg;
 }
+// [1, 2, 3];
+// 1/3 + 2/3 + 3/3
+function getAvgReduce(arr: number[]): number {
+  const avg: number = arr.reduce(
+    (total: number, sk: number, _idx: number, argArr: number[]): number => {
+      return total + sk / argArr.length;
+    },
+    0
+  );
+  // const avg: number = sum / elemntuMasyve;
+  console.log('getAvgReduce ===', avg);
+  return avg;
+}
+
 getAvg(numbers);
-getAvg(numbers2);
-getAvg(numbers2);
+getAvgReduce(numbers);
+// getAvg(numbers2);
 // 2. sukurti kinmanji positives ir ikelti i ji visas teigiamas reikmes is numbers2
 
 // 3. parasyti funkcija kuri ima masyva kaip argumenta ir grazins masyvu objekta su [{value: 1}, {value: 15}...]
@@ -31,7 +76,13 @@ getAvg(numbers2);
 
 // 5 kuriam funkcija kuri priima 2 argumentus. msg ir dest.
 // msg yra string zinute, o dest yra id elemento i kur padeti msg zinute.
+function displayMessage(msg: string, dest: string): void {
+  // 1. nusitaikyti i elmenta
+  // 2. irasyti i ta el msg (el.textContent)
+}
 
+displayMessage('hello from ts world', 'app');
+displayMessage('hello from ts world', 'out');
 // sunkesnes =========================
 
 // naudojam data.js items masyva
