@@ -4,7 +4,7 @@
 
 2. sukurti kinmanji positives ir ikelti i ji visas teigiamas reikmes is numbers2
 
-3. parasyti funkcija kuri ima masyva kaip argumenta ir grazins masyvu objekta su [{value: 1}, {value: 15}...]
+3. parasyti funkcija kuri ima masyva kaip argumenta ir grazins objektu masyva su [{value: 1}, {value: 15}...]
 
 4. parasyti funkcija kuri ima masyva kaip argumenta ir grazina pirmus 4 elementus
 
