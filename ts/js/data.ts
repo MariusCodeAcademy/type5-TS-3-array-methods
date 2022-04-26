@@ -1,3 +1,5 @@
+import { items } from '../data/items.js';
+
 // inicijuoti ts projekta tsc --init
 // prirasyti tipus
 
@@ -97,8 +99,8 @@ getPartOfArr(numbers, 'last');
 
 // 4.a ta pati funkcija bet su string argumentu. jei argumentas === 'last' grazinam paskutinius 4 elementus, jei nera argumento pirmus 4.
 function getPartOfArr(arr: number[], isLast?: string): number[] {
-  let sliced: number[] = ''; // terenary goes here
-
+  let sliced: number[] = isLast === 'last' ? arr.slice(-4) : arr.slice(0, 4);
+  // salyga ? true : false
   // if (isLast === 'last') {
   //   sliced = arr.slice(-4);
   // } else {
@@ -110,6 +112,7 @@ function getPartOfArr(arr: number[], isLast?: string): number[] {
 }
 
 // 5 kuriam funkcija kuri priima 2 argumentus. msg ir dest.
+
 // msg yra string zinute, o dest yra id elemento i kur padeti msg zinute.
 function displayMessage(msg: string, dest: string): void {
   // 1. nusitaikyti i elmenta
@@ -125,10 +128,40 @@ displayMessage('hello from ts world', 'out');
 
 // -- kuriam funkcijas kurios masyva gauna kaip argumenta --
 
-// s2. parasysti funkcija kuri grazina objektu masyva su pavadinimu ir kaina {price: 45, name: 'shoues'}
+// s2. parasysti funkcija kuri grazina objektu masyva su pavadinimu ir kaina {price: 45, title: 'shoues'}
+interface shopItem {
+  id: number;
+  qty: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
+}
+interface titleAndPrice {
+  price: number;
+  title: string;
+}
+function getTitleAndPrice(arr: shopItem[]): titleAndPrice[] {
+  const rez: titleAndPrice[] = arr.map(
+    ({ price, title }: { price: number; title: string }): titleAndPrice => {
+      return {
+        price,
+        title,
+      };
+    }
+  );
+  console.log('rez ===', rez);
+  return rez;
+}
+getTitleAndPrice(items);
 
 // s3. parasyti funkcija kuri grazina kainu vidurki
 
 // s4. parasyti funkcija kuri grazina visas kategorijas masyve.
 
-// s5.parasyti funkcija kuri grazina ir iskonsolina bendra prekiu kieki
+// s5.parasyti funkcija kuri grazina ir iskonsolina bendra rating kieki

@@ -1,6 +1,6 @@
 # uzduotys
 
-naudojam dayt2.js failiuka
+naudojam day2.ts failiuka
 
 1. parasyti Fn kuri atspausdina visus vyrus
 2. parasyti Fn kuri grazina masyve moteris jaunesnies nei 35 metai
