@@ -87,14 +87,27 @@ const rez = makeArrObj(numbers);
 console.log('rez ===', rez);
 
 // 4. parasyti funkcija kuri ima masyva kaip argumenta ir grazina pirmus 4 elementus
-function getPartOfArr(arr: number[]): number[] {
-  const sliced: number[] = arr.slice(0, 4);
+// function getPartOfArr(arr: number[]): number[] {
+//   const sliced: number[] = arr.slice(0, 4);
+//   console.log('sliced ===', sliced);
+//   return sliced;
+// }
+getPartOfArr(numbers);
+getPartOfArr(numbers, 'last');
+
+// 4.a ta pati funkcija bet su string argumentu. jei argumentas === 'last' grazinam paskutinius 4 elementus, jei nera argumento pirmus 4.
+function getPartOfArr(arr: number[], isLast?: string): number[] {
+  let sliced: number[] = ''; // terenary goes here
+
+  // if (isLast === 'last') {
+  //   sliced = arr.slice(-4);
+  // } else {
+  //   sliced = arr.slice(0, 4);
+  // }
+
   console.log('sliced ===', sliced);
   return sliced;
 }
-getPartOfArr(numbers);
-
-// 4.a ta pati funkcija bet su string argumentu. jei argumentas === 'last' grazinam paskutinius 4 elementus, jei nera argumento pirmus 4.
 
 // 5 kuriam funkcija kuri priima 2 argumentus. msg ir dest.
 // msg yra string zinute, o dest yra id elemento i kur padeti msg zinute.
