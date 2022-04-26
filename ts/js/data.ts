@@ -67,10 +67,32 @@ getAvg(numbers);
 getAvgReduce(numbers);
 // getAvg(numbers2);
 // 2. sukurti kinmanji positives ir ikelti i ji visas teigiamas reikmes is numbers2
+const positives: number[] = numbers2.filter((sk: number): boolean => sk > 0);
 
-// 3. parasyti funkcija kuri ima masyva kaip argumenta ir grazins masyvu objekta su [{value: 1}, {value: 15}...]
+// 3. parasyti funkcija kuri ima masyva kaip argumenta ir grazins objektu masyva su [{value: 1}, {value: 15}...]
+interface valueObj {
+  value: number;
+}
+
+// const a: valueObj = { id: 125 };
+// const b: object = { id: 125 };
+
+function makeArrObj(arr: number[]): valueObj[] {
+  const rez: valueObj[] = arr.map((sk: number): valueObj => {
+    return { value: sk };
+  });
+  return rez;
+}
+const rez = makeArrObj(numbers);
+console.log('rez ===', rez);
 
 // 4. parasyti funkcija kuri ima masyva kaip argumenta ir grazina pirmus 4 elementus
+function getPartOfArr(arr: number[]): number[] {
+  const sliced: number[] = arr.slice(0, 4);
+  console.log('sliced ===', sliced);
+  return sliced;
+}
+getPartOfArr(numbers);
 
 // 4.a ta pati funkcija bet su string argumentu. jei argumentas === 'last' grazinam paskutinius 4 elementus, jei nera argumento pirmus 4.
 

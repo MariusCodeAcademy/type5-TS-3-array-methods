@@ -10,6 +10,8 @@
 
 4.1 ta pati funkcija bet su papildomu string argumentu. jei argumentas === 'last' grazinam paskutinius 4 elementus, jei nera argumento pirmus 4.
 
+4.2 jei masyve yra maziau nei 4 elementai grazinti tik viena elementa, atitinkamai pirma arba paskutini
+
 5. kuriam funkcija kuri priima 2 argumentus. msg ir dest.
    msg yra string zinute, o dest yra id elemento i kur padeti msg zinute.
    ivygdzius funkcija zinute turetu atsidurti DOM (sukurti index.html tuscia diva su id 'app')
