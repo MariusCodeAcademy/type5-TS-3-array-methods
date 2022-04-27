@@ -1,6 +1,7 @@
 # uzduotys
 
-naudojam day2.ts failiuka
+naudojam day2.ts failiuka.
+visos sukurtos funkcijos ima masyva kaip argumenta ir su juo dirba.
 
 1. parasyti Fn kuri atspausdina visus vyrus
 2. parasyti Fn kuri grazina masyve moteris jaunesnies nei 35 metai
@@ -9,4 +10,9 @@ naudojam day2.ts failiuka
 5. atspausdinti visų vairuojančių žmonių lytis
 6. parasyti fn kuri suskaiciuoja ir grazina kiek yra vairuojanciu vyru ir moteru
    pvz {man: 4, woman: 5}
-7.
+7. parasyti fn kuri grazintu amziu masyva.
+8. parasyti fn findByName(arr, 'James') ji gauna masyva ir stringa argumentu. ieskom objekto pagal argumentu gauta string. jei randam grazinam ta objekta.
+   8.1 jei nerandam grazinam nauja objekta {err: not found}
+9. parasyti fn kuri grazina visu zmoniu pavardziu ilgius.
+10. parasyti fn kuri grazina nauja masyva su objektais kurie turi papildoma key=value. Pridekime {isArchived: false} kiekvienam person objektui. Aprasyti tipa kuri grazina fn.
+11. issaugoti 10 punkte gauta rezultata ir paduoti i i funkcija makeDelete(<arr>, <index>). Funkcija gautame masyve index elemente pakeicia 'isArchived' savybe i true.
