@@ -22,3 +22,6 @@ visos sukurtos funkcijos ima masyva kaip argumenta ir su juo dirba.
 ### naudojam data/data.js
 
 1d. Sugeneruoti items ul elemente li elementus su prekiu pavadinimu ir kaina ir mygtuku buy
+2d. pasaudus mygtuka nuperkam preke. Tai reiskia pasalinam ja is saraso.
+2.1d Susikuriam masyva cart. jis tures objektus {title: , price: , qty: 1}. paspaudus buy, ikeliam ta preke i cart masyva.
+3d atvaizduojam cart masyva po prekiu sarasu.
