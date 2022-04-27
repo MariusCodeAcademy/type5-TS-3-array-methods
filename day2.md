@@ -16,3 +16,9 @@ visos sukurtos funkcijos ima masyva kaip argumenta ir su juo dirba.
 9. parasyti fn kuri grazina visu zmoniu pavardziu ilgius.
 10. parasyti fn kuri grazina nauja masyva su objektais kurie turi papildoma key=value. Pridekime {isArchived: false} kiekvienam person objektui. Aprasyti tipa kuri grazina fn.
 11. issaugoti 10 punkte gauta rezultata ir paduoti i i funkcija makeDelete(<arr>, <index>). Funkcija gautame masyve index elemente pakeicia 'isArchived' savybe i true.
+
+## DOM public index.html
+
+### naudojam data/data.js
+
+1d. Sugeneruoti items ul elemente li elementus su prekiu pavadinimu ir kaina ir mygtuku buy
